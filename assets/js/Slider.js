@@ -49,10 +49,10 @@ class Slider {
         else
             this.showPrevBtn.disabled = true;
         window.addEventListener('keydown', function (e) {
-            if (e.code == 'ArrowLeft' && !that.showPrevBtn.disabled) {
+            if ((e.code == 'ArrowLeft' || e.code == 'Numpad4') && !that.showPrevBtn.disabled) {
                 that.onShowPrevBtnClick();
             }
-            if (e.code == 'ArrowRight' && !that.showNextBtn.disabled) {
+            if ((e.code == 'ArrowRight' || e.code == 'Numpad6') && !that.showNextBtn.disabled) {
                 that.onShowNextBtnClick();
             }
         });
