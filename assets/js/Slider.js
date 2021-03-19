@@ -50,12 +50,10 @@ class Slider {
             this.showPrevBtn.disabled = true;
         window.addEventListener('keydown', function (e) {
             if (e.code == 'ArrowLeft' && !that.showPrevBtn.disabled) {
-                if (that.currentImageIndex != 0)
-                    that.onShowPrevBtnClick();
+                that.onShowPrevBtnClick();
             }
             if (e.code == 'ArrowRight' && !that.showNextBtn.disabled) {
-                if (that.currentImageIndex != imagesUrls.length - 1)
-                    that.onShowNextBtnClick();
+                that.onShowNextBtnClick();
             }
         });
     }
