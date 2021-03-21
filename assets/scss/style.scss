@@ -19,30 +19,24 @@ h1 {
 .wrapper {
     min-height: 100%;
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
 }
 .content {
     -webkit-box-flex: 1;
-    -webkit-flex: 1 1 auto;
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-    -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
     -webkit-box-align: center;
-    -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
 }
@@ -52,11 +46,9 @@ h1 {
 }
 .header-wrap {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-    -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
 
@@ -68,7 +60,6 @@ h1 {
     }
     .title {
         -webkit-box-flex: 1;
-        -webkit-flex: 1 1 auto;
         -ms-flex: 1 1 auto;
         flex: 1 1 auto;
         margin: 0 auto;
@@ -83,28 +74,24 @@ h1 {
 }
 .itk-slider {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     -webkit-box-align: center;
-    -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
     -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
     display: flex;
     -webkit-box-shadow: 10px 10px 44px -10px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 44px -10px rgba(0, 0, 0, 0.75);
-    //width: 60%;
-    .slide-img {
+    /*width: 60%;*/
+    .slide-img-wrap {
         -webkit-box-flex: 1;
-        -webkit-flex: 1 1 auto;
         -ms-flex: 1 1 auto;
         flex: 1 1 auto;
         text-align: center;
         img {
-            max-width: 100%;
+            width: 100%;
         }
     }
     button {
@@ -163,10 +150,21 @@ h1 {
     .container {
         width: 90%;
     }
-    .itk-slider {
-        button {
-            width: 40px;
-            height: 40px;
-        }
+    .header-wrap {
+      .logo {
+        width: 40px;
     }
+    .title {
+       h2 {
+        letter-spacing: 8px;
+        font-size: 18px;
+    }
+}
+}
+.itk-slider {
+    button {
+        width: 40px;
+        height: 40px;
+    }
+}
 }

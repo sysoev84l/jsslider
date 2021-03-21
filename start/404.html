@@ -1,14 +1,12 @@
 <?php require_once $_SERVER['DOCUMENT_ROOT']."/assets/php/functions.php";?>
 <?php start() ?>
+<?php header_delay() ?>
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <title>Slider</title>
     <link rel="stylesheet" href="./assets/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -32,21 +30,7 @@
         </header>
         <main class='content'>
             <div class="container">
-                <div class='itk-slider' id='itk-slider'>
-                    <div class="btn-prev">
-                        <button class='show-prev-btn'>
-                            <i class='fa fa-arrow-left fa-2x' aria-hidden='true'></i>
-                        </button>
-                    </div>
-                    <div class='slide-img-wrap'>
-                        <img src='' class='slide-img' alt="">
-                    </div>
-                    <div class="btn-next">
-                        <button class='show-next-btn'>
-                            <i class='fa fa-arrow-right fa-2x' aria-hidden='true'></i>
-                        </button>
-                    </div>
-                </div>
+                <h1>Что-то пошло не так!!</h1>
             </div>
         </main>
         <footer class='footer'>
@@ -57,10 +41,8 @@
             </div>
         </footer>
     </div>
-    <script src="./assets/js/arr-png.js"></script>
-    <script src="./assets/js/arr-svg.js"></script>
-    <script src="./assets/js/Slider.js"></script>
-    <script src="./assets/js/main.js"></script>
+    <!-- <script src="./assets/js/images-urls.js"></script> -->
+    <script type="module" src="./assets/js/main.js"></script>
 </body>
 
 </html>
