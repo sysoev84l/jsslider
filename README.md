@@ -1,2 +1,2 @@
 # jsslider
-It's javascript slider!!
+It's javascript slider!!!
