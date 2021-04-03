@@ -4,11 +4,13 @@ class Slider {
         this.showPrevBtn = null;
         this.showNextBtn = null;
         this.slideImage = null;
+        this.numberText= null;
         this.currentImageIndex = 0;
 
     }
     onShowNextBtnClick(e) {
         this.currentImageIndex++;
+        this.numberText.innerHTML = `${this.currentImageIndex+1} / ${this.imagesUrls.length}`;
         this.slideImage.src = this.imagesUrls[this.currentImageIndex];
         this.showPrevBtn.disabled = false;
         if (this.currentImageIndex == this.imagesUrls.length - 1) {
@@ -16,12 +18,15 @@ class Slider {
         }
     }
     onShowPrevBtnClick(e) {
+
         this.currentImageIndex--;
+        this.numberText.innerHTML = `${this.currentImageIndex+1} / ${this.imagesUrls.length}`;
         this.slideImage.src = this.imagesUrls[this.currentImageIndex];
         this.showNextBtn.disabled = false;
         if (this.currentImageIndex == 0) {
             this.showPrevBtn.disabled = true;
         }
+
     }
     start(elId, imagesArr) {
         const that = this;
@@ -32,9 +37,11 @@ class Slider {
         this.showPrevBtn = el.querySelector('.show-prev-btn');
         this.showNextBtn = el.querySelector('.show-next-btn');
         this.slideImage = el.querySelector('.slide-img');
+        this.numberText = el.querySelector('.number-text');
         this.imagesUrls = imagesArr;
         this.slideImage.src = this.imagesUrls[this.currentImageIndex];
-
+        this.numberText.innerHTML = `${this.currentImageIndex+1} / ${this.imagesUrls.length}`;
+        console.log(this.numberText.innerHTML);
         this.showPrevBtn.addEventListener('click', function (e) {
             that.onShowPrevBtnClick(e);
         });
