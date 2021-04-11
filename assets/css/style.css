@@ -1,5 +1,4 @@
 * {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0; }
 
@@ -18,26 +17,13 @@ h1 {
 
 .wrapper {
   min-height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column; }
 
 .content {
-  -webkit-box-flex: 1;
-  -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center; }
 
 .header {
@@ -45,19 +31,13 @@ h1 {
   background: #000; }
 
 .header-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center; }
   .header-wrap .logo {
     width: 100px; }
     .header-wrap .logo img {
       width: 100%; }
   .header-wrap .title {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     margin: 0 auto;
     text-align: center; }
@@ -68,22 +48,14 @@ h1 {
       font-size: 28px; }
 
 .itk-slider {
-  display: -webkit-box;
   display: -ms-flexbox;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   display: flex;
-  -webkit-box-shadow: 10px 10px 44px -10px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 10px 44px -10px rgba(0, 0, 0, 0.75);
   /*width: 60%;*/ }
   .itk-slider .slide-img-wrap {
     position: relative;
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     text-align: center; }
     .itk-slider .slide-img-wrap img {
@@ -100,11 +72,6 @@ h1 {
     width: 50px;
     background-color: #ffd429;
     border-radius: 100px;
-    -webkit-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    -webkit-transition: all 2.5s ease;
-    -o-transition: all .5s ease;
-    -o-transition: all 2.5s ease;
     transition: all 2.5s ease; }
     .itk-slider button:hover {
       background: #f4cd34; }
@@ -113,12 +80,22 @@ h1 {
 
 .footer {
   background: #164d7a;
-  padding: 20px 0; }
-  .footer .copyright {
-    margin: 0;
-    font-size: 14px;
+  padding: 10px 0;
+  color: #fff; }
+  .footer a {
     color: #fff;
+    text-decoration: none; }
+    .footer a:hover {
+      text-decoration: none; }
+  .footer .footer-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     text-align: center; }
+    .footer .footer-wrap .copyright {
+      margin: 0;
+      font-size: 14px;
+      text-align: center; }
 
 @media screen and (max-width: 1200px) {
   .container {
@@ -144,6 +121,24 @@ h1 {
 
   .itk-slider button {
     width: 40px;
-    height: 40px; } }
+    height: 40px; }
+
+  .footer .footer-wrap {
+    flex-wrap: wrap; }
+    .footer .footer-wrap .git-hub {
+      order: 2;
+      flex: 0 1 50%;
+      text-align: left; }
+    .footer .footer-wrap .copyright {
+      order: 1;
+      flex: 0 1 100%;
+      margin: 0;
+      font-size: 14px;
+      text-align: center;
+      margin-bottom: 10px; }
+    .footer .footer-wrap .host-name-wrap {
+      order: 3;
+      flex: 0 1 50%;
+      text-align: right; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -4,23 +4,25 @@ class Slider {
         this.showPrevBtn = null;
         this.showNextBtn = null;
         this.slideImage = null;
-        this.numberText= null;
+        this.numberText = null;
         this.currentImageIndex = 0;
 
     }
+
     onShowNextBtnClick(e) {
         this.currentImageIndex++;
-        this.numberText.innerHTML = `${this.currentImageIndex+1} / ${this.imagesUrls.length}`;
+        this.numberText.innerHTML = `${this.currentImageIndex + 1} / ${this.imagesUrls.length}`;
         this.slideImage.src = this.imagesUrls[this.currentImageIndex];
         this.showPrevBtn.disabled = false;
         if (this.currentImageIndex == this.imagesUrls.length - 1) {
             this.showNextBtn.disabled = true;
         }
     }
+
     onShowPrevBtnClick(e) {
 
         this.currentImageIndex--;
-        this.numberText.innerHTML = `${this.currentImageIndex+1} / ${this.imagesUrls.length}`;
+        this.numberText.innerHTML = `${this.currentImageIndex + 1} / ${this.imagesUrls.length}`;
         this.slideImage.src = this.imagesUrls[this.currentImageIndex];
         this.showNextBtn.disabled = false;
         if (this.currentImageIndex == 0) {
@@ -28,6 +30,7 @@ class Slider {
         }
 
     }
+
     start(elId, imagesArr) {
         const that = this;
 
@@ -40,8 +43,7 @@ class Slider {
         this.numberText = el.querySelector('.number-text');
         this.imagesUrls = imagesArr;
         this.slideImage.src = this.imagesUrls[this.currentImageIndex];
-        this.numberText.innerHTML = `${this.currentImageIndex+1} / ${this.imagesUrls.length}`;
-        console.log(this.numberText.innerHTML);
+        this.numberText.innerHTML = `${this.currentImageIndex + 1} / ${this.imagesUrls.length}`;
         this.showPrevBtn.addEventListener('click', function (e) {
             that.onShowPrevBtnClick(e);
         });
@@ -51,9 +53,7 @@ class Slider {
         if (this.imagesUrls.length == 1) {
             this.showPrevBtn.disabled = true;
             this.showNextBtn.disabled = true;
-        }
-
-        else
+        } else
             this.showPrevBtn.disabled = true;
         window.addEventListener('keydown', function (e) {
             if ((e.code == 'ArrowLeft' || e.code == 'Numpad4') && !that.showPrevBtn.disabled) {
