@@ -120,6 +120,10 @@ h1 {
     letter-spacing: 8px;
     font-size: 18px; }
 
+  .itk-slider .number-text {
+    color: #000;
+    font-size: 8px;
+    padding: 2px 0 0 1px; }
   .itk-slider button {
     width: 40px;
     height: 40px; }
