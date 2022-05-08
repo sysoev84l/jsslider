@@ -12,7 +12,4 @@ function start() {
   ini_set('display_errors', 1);
   ini_set('display_startup_errors', 1);
 }
-function header_delay($delay=10, $url='') {
-  header ("Refresh:".$delay."; URL=".get_sn().$url);
-}
 ?>
